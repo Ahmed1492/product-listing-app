@@ -18,13 +18,6 @@
   top: 9px;
 }
 
-.sellItemBtn {
-  background-color: #d9f99d;
-}
-.selectedPage {
-  background-color: red;
-}
-
 /* -------------------- Media Query -------------------------- */
 
 @media (min-width: 1290px) and (max-width: 1466px) {

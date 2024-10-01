@@ -162,7 +162,7 @@ const ProductList = () => {
           </div>
           <button
             onClick={() => setIsAddNewProductMode(true)}
-            className="sellItemBtn px-6 py-2 rounded-lg"
+            className="bg-[#d9f99d] px-6 py-2 rounded-lg"
           >
             + Sell Item
           </button>
