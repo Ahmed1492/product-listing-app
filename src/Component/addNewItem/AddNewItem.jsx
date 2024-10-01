@@ -133,17 +133,18 @@ export const AddNewItem = ({
   }, []);
 
   return (
-    <div className="m-auto pt-7 containerForm">
+    <div className="m-auto pt-4 containerForm">
       <form
-        className="rounded m-auto py-3 flex flex-col justify-center bg-white px-2 pb-5"
+        className="rounded m-auto  flex flex-col justify-center bg-white py-4 px-5 pb-5"
         onSubmit={(e) => e.preventDefault()}
       >
+        <h1 className="text-3xl	font-medium		">Sell An Item</h1>
         <button onClick={handleCloseForm} className="closeIcone">
           <CloseIcon />
         </button>
 
         {/* Image Upload */}
-        <label className="text-left mt-2" htmlFor="uploadedImage">
+        <label className="text-left mt-6" htmlFor="uploadedImage">
           Upload Image
         </label>
         <div className="border-slate-400 border rounded mt-1 p-14 gap-5 flex flex-col">
