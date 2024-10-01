@@ -174,7 +174,7 @@ const ProductList = () => {
       <div className="flex  justify-between flex-wrap mt-20">
         {selectedProducts.length > 0 ? (
           selectedProducts.map((product, index) => (
-            <div key={index} className="singleProduct  m-auto mb-2">
+            <div key={index} className="singleProduct   mb-2">
               <img
                 src={product.imgSrc}
                 alt={product.name}

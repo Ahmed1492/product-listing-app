@@ -51,6 +51,9 @@
     object-fit: cover !important;
     border-radius: 3px !important;
   }
+  .singleProduct {
+    margin: auto !important;
+  }
 
   .searchInput {
     width: 50%;
@@ -68,6 +71,10 @@
     width: 50vw;
     object-fit: cover;
     border-radius: 3px;
+  }
+
+  .singleProduct {
+    margin: auto !important;
   }
 
   .searchInput {
@@ -90,6 +97,9 @@
     object-fit: cover;
     border-radius: 3px;
   }
+  .singleProduct {
+    margin: auto !important;
+  }
 
   .searchInput {
     width: 80%;
@@ -111,6 +121,9 @@
     width: 70vw;
     object-fit: cover;
     border-radius: 3px;
+  }
+  .singleProduct {
+    margin: auto !important;
   }
 
   .searchInput {
