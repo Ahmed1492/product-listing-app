@@ -6,13 +6,14 @@ import EastIcon from "@mui/icons-material/East";
 import SearchIcon from "@mui/icons-material/Search";
 import { AddNewItem } from "../addNewItem/AddNewItem";
 
-const ProductList = ({ products, setProducts }) => {
+const ProductList = () => {
   const [searchByName, setSearchByName] = useState("");
   const [sortBy, setSortBy] = useState("A - Z");
   const [category, setCategory] = useState("All"); // New state for category filtering
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 4;
   const [isAddNewProductMode, setIsAddNewProductMode] = useState(false);
+  const [products, setProducts] = useState([]);
 
   useEffect(() => {
     if (products.length === 0) {
@@ -51,6 +52,7 @@ const ProductList = ({ products, setProducts }) => {
     });
   }, [products, searchByName, category]);
 
+  // Function For Sorting Products
   const sortedProducts = useMemo(() => {
     return [...filteredProducts].sort((a, b) => {
       if (sortBy === "A - Z") {
@@ -66,23 +68,29 @@ const ProductList = ({ products, setProducts }) => {
     });
   }, [filteredProducts, sortBy]);
 
+  // calculates the total number of pages
   const totalPages = Math.ceil(sortedProducts.length / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;
+
+  // create a new array contains only the products to be displayed on the current page
   const selectedProducts = sortedProducts.slice(
     startIndex,
     startIndex + itemsPerPage
   );
 
+  // change Current Page
   const handlePageClick = (pageNumber) => {
     setCurrentPage(pageNumber);
   };
 
+  // Get Next page
   const handleNext = () => {
     if (currentPage < totalPages) {
       setCurrentPage(currentPage + 1);
     }
   };
 
+  // Get Previous page
   const handlePrevious = () => {
     if (currentPage > 1) {
       setCurrentPage(currentPage - 1);
@@ -97,6 +105,7 @@ const ProductList = ({ products, setProducts }) => {
 
   return (
     <div className="spaceX p-3">
+      {/* If Button Clicked Show addForm */}
       {isAddNewProductMode && (
         <AddNewItem
           products={products}

@@ -7,6 +7,7 @@ export const AddNewItem = ({
   setProducts,
   setIsAddNewProductMode,
 }) => {
+  // Store Data Of New Item
   const [newProduct, setNewProduct] = useState({
     name: "",
     price: "",
@@ -16,20 +17,8 @@ export const AddNewItem = ({
   });
 
   const [errors, setErrors] = useState({}); // State to store error messages
-  // Function to handle form input changes
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-
-    setNewProduct((prevProduct) => ({
-      ...prevProduct,
-      [name]: value,
-    }));
-
-    // Real-time validation
-    validateField(name, value);
-  };
-
+  // Function Make Validation RealTime
   const validateField = (name, value) => {
     let tempErrors = { ...errors };
 
@@ -52,6 +41,20 @@ export const AddNewItem = ({
 
     setErrors(tempErrors);
   };
+
+  // Function to handle form input changes
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+
+    setNewProduct((prevProduct) => ({
+      ...prevProduct,
+      [name]: value,
+    }));
+
+    // Real-time validation
+    validateField(name, value);
+  };
+
   // Function to convert image to Base64
   const convertImageToBase64 = (file) => {
     return new Promise((resolve, reject) => {
@@ -62,7 +65,8 @@ export const AddNewItem = ({
     });
   };
 
-  const handleClose = () => {
+  // Function To Ensure Inputs Are Empty And Close Form Of Add New Item
+  const handleCloseForm = () => {
     setIsAddNewProductMode(false);
     setNewProduct({
       name: "",
@@ -86,7 +90,7 @@ export const AddNewItem = ({
     }
   };
 
-  // Validation function
+  // Validation function To Ensure Sent data Is Not Empty
   const validateProduct = () => {
     let tempErrors = {};
 
@@ -102,7 +106,7 @@ export const AddNewItem = ({
     return Object.keys(tempErrors).length === 0; // If no errors, return true
   };
 
-  // Function to add product
+  // Function to add product and Send It To LocalStorage
   const addProduct = () => {
     if (validateProduct()) {
       const updatedProducts = [...products, newProduct];
@@ -121,6 +125,7 @@ export const AddNewItem = ({
     }
   };
 
+  // retrieving data from localStorage when the component mounts
   useEffect(() => {
     const storedProducts = localStorage.getItem("products");
     if (storedProducts) {
@@ -134,7 +139,7 @@ export const AddNewItem = ({
         className="rounded m-auto py-3 flex flex-col justify-center bg-white px-2 pb-5"
         onSubmit={(e) => e.preventDefault()}
       >
-        <button onClick={handleClose} className="closeIcone">
+        <button onClick={handleCloseForm} className="closeIcone">
           <CloseIcon />
         </button>
 
