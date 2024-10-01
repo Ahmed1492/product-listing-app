@@ -1,0 +1,45 @@
+form {
+  width: 40% !important;
+  z-index: 8;
+  position: relative;
+}
+
+.containerForm {
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 4;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.closeIcone {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+}
+
+/* -------------------- Media Query -------------------------- */
+
+@media (min-width: 1290px) and (max-width: 1466px) {
+  form {
+    width: 50% !important;
+  }
+}
+@media (min-width: 882px) and (max-width: 1290px) {
+  form {
+    width: 60% !important;
+  }
+}
+
+@media (min-width: 654px) and (max-width: 882px) {
+  form {
+    width: 80% !important;
+  }
+}
+
+@media (max-width: 735px) {
+  form {
+    width: 90% !important;
+  }
+}

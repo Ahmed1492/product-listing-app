@@ -1,0 +1,134 @@
+.singleProduct img.productImage {
+  width: 18vw;
+  height: 38vh;
+}
+.spaceX {
+  width: 90%;
+  margin: auto;
+  margin-top: 4rem;
+}
+
+.searchInput {
+  width: 38%;
+  position: relative;
+}
+.searchIcone {
+  position: absolute;
+  right: 12px;
+  top: 9px;
+}
+
+.sellItemBtn {
+  background-color: #d9f99d;
+}
+.selectedPage {
+  background-color: red;
+}
+
+/* -------------------- Media Query -------------------------- */
+
+@media (min-width: 1290px) and (max-width: 1466px) {
+  .singleProduct img.productImage {
+    width: 20vw;
+    height: 38vh;
+    object-fit: cover;
+    border-radius: 3px;
+  }
+}
+@media (min-width: 1172px) and (max-width: 1290px) {
+  .singleProduct img.productImage {
+    width: 26vw;
+    object-fit: cover;
+    border-radius: 3px;
+  }
+  .searchInput {
+    width: 50%;
+    margin: 20px;
+  }
+}
+
+@media (min-width: 882px) and (max-width: 1172px) {
+  .allproducts {
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 40px;
+  }
+  .singleProduct img.productImage {
+    width: 30vw !important;
+    object-fit: cover !important;
+    border-radius: 3px !important;
+  }
+
+  .searchInput {
+    width: 50%;
+    margin: 20px;
+  }
+}
+
+@media (min-width: 736px) and (max-width: 882px) {
+  .allproducts {
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+  }
+  .singleProduct img.productImage {
+    width: 50vw;
+    object-fit: cover;
+    border-radius: 3px;
+  }
+
+  .searchInput {
+    width: 80%;
+    margin: 20px;
+  }
+  .sellItemBtn {
+    margin: 10px;
+  }
+}
+
+@media (min-width: 654px) and (max-width: 735px) {
+  .allproducts {
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+  }
+  .singleProduct img.productImage {
+    width: 50vw;
+    object-fit: cover;
+    border-radius: 3px;
+  }
+
+  .searchInput {
+    width: 80%;
+    margin: 20px;
+  }
+  .sellItemBtn {
+    margin: auto;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 654px) {
+  .allproducts {
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+  }
+  .singleProduct img.productImage {
+    width: 70vw;
+    object-fit: cover;
+    border-radius: 3px;
+  }
+
+  .searchInput {
+    width: 80%;
+    margin: 20px;
+  }
+  .sellItemBtn {
+    margin: auto;
+    margin-top: 20px;
+  }
+  .sortCategory {
+    margin: 20px;
+  }
+}

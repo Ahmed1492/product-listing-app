@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <!-- 
+      %PUBLIC_URL% => this variable store path of public file
+      -->
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <!-- viewPort meta important to handle responsive in mobile if use bootstrap -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- backGround of box of url black when you oppen website on mobile -->
+    <meta name="theme-color" content="#000000" />
+    <!--
+    meta tag is used to provide a concise summary of the webpage's content
+    can be useful for SEO purposes and for providing context when shared on social media
+      -->
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <!-- 
+    this meta will make icon to display only  on apple 
+      -->
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!-- 
+    PWD => Progressive Web Application this techniqe to convert your web application to mobile application
+    - is a JSON file that contains metadata about your web application, specifying how you want it to appear and 
+    behave
+    when accessed on mobile devices.
+      -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>React App</title>
+  </head>
+  <body>
+    <!--
+    The <noscript> element is used to provide alternative content for users who have disabled or are unable to run
+    JavaScript in their browsers.
+      -->
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <!-- 
+    the entry point where the React components are rendered and managed by React's virtual DOM.
+      -->
+    <div id="root"></div>
+  </body>
+</html>
