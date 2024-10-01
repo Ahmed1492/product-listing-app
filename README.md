@@ -22,7 +22,7 @@
 - Ensure you have [Node.js](https://nodejs.org/) installed on your machine.
 
 ### Installation
-1. Clone the repository:    git clone https://github.com/yourusername/your-repo-name.git
+1. Clone the repository:    https://github.com/Ahmed1492/product-listing-app.git
 2. Install dependencies:     npm install
 
 
