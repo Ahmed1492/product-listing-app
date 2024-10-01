@@ -125,7 +125,6 @@ export const AddNewItem = ({
     }
   };
 
-  // retrieving data from localStorage when the component mounts
   useEffect(() => {
     const storedProducts = localStorage.getItem("products");
     if (storedProducts) {

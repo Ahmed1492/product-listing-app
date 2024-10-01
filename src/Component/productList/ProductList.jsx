@@ -103,7 +103,7 @@ const ProductList = () => {
   );
 
   return (
-    <div className="spaceX p-3">
+    <div className="spaceX p-3 ">
       {/* If Button Clicked Show addForm */}
       {isAddNewProductMode && (
         <AddNewItem
@@ -171,7 +171,7 @@ const ProductList = () => {
       </div>
 
       {/* All Products */}
-      <div className="flex  justify-between flex-wrap">
+      <div className="flex  justify-between flex-wrap mt-20">
         {selectedProducts.length > 0 ? (
           selectedProducts.map((product, index) => (
             <div key={index} className="singleProduct  m-auto mb-2">
