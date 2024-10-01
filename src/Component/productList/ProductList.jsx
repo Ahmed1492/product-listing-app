@@ -101,7 +101,6 @@ const ProductList = () => {
   const categories = Array.from(
     new Set(products.map((product) => product.category).filter(Boolean))
   );
-  console.log(categories);
 
   return (
     <div className="spaceX p-3">
@@ -126,13 +125,14 @@ const ProductList = () => {
         </div>
         {/* Sorting */}
         <div className="flex flex-wrap items-center">
-          <label className="me-2" htmlFor="">
+          <label className="me-2" htmlFor="sortInputName">
             Sorted By
           </label>
           <select
             className="border selectedInput me-5 border-gray-300 rounded-lg px-5 py-2"
             onChange={handleSortChange}
             value={sortBy}
+            id="sortInputName"
           >
             <option value="A - Z">A - Z</option>
             <option value="Z - A">Z - A</option>
@@ -142,13 +142,14 @@ const ProductList = () => {
 
           {/*Sorting By Category */}
           <div className="sortCategory">
-            <label className="me-2" htmlFor="">
+            <label className="me-2" htmlFor="sortInputcategory">
               Category
             </label>
             <select
               className="border selectedInput me-5 border-gray-300 rounded-lg px-5 py-2"
               onChange={handleCategoryChange}
               value={category}
+              id="sortInputcategory"
             >
               <option value="All">All</option>
               {categories?.map((item, index) => (
