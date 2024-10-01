@@ -177,8 +177,8 @@ export const AddNewItem = ({
 
         {/* Description */}
         <div className="w-full mt-4">
-          <label htmlFor="desc">Description</label>
-          <input
+          <label htmlFor="desc">Descripe Your Item </label>
+          <textarea
             type="text"
             name="desc"
             id="desc"
@@ -211,7 +211,7 @@ export const AddNewItem = ({
 
         {/* Price */}
         <div className="w-full mt-4">
-          <label htmlFor="price">Price</label>
+          <label htmlFor="price">Item Price</label>
           <input
             type="number"
             name="price"

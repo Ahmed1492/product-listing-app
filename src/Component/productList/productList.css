@@ -60,6 +60,13 @@
     margin: 20px;
   }
 }
+textarea {
+  resize: none;
+  height: 9rem;
+}
+.currentPage {
+  border-color: #d9f99d !important;
+}
 
 @media (min-width: 736px) and (max-width: 882px) {
   .allproducts {

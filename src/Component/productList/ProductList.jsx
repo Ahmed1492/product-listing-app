@@ -215,7 +215,7 @@ const ProductList = () => {
             key={index}
             onClick={() => handlePageClick(index + 1)}
             className={`page-number ${
-              currentPage === index + 1 ? "border px-4 py-2" : ""
+              currentPage === index + 1 ? "border currentPage px-4 py-2" : ""
             }`}
           >
             {index + 1}
