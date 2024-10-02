@@ -191,7 +191,7 @@ const ProductList = () => {
 
                   <div className="flex gap-3">
                     <img src={Poster} alt="posterPhoto" />
-                    <p>Josie Parker </p>
+                    <p className="font-medium		">Josie Parker </p>
                   </div>
                 </div>
                 <div className="text-xl	 border divide-slate-500 rounded px-2 py-1">
