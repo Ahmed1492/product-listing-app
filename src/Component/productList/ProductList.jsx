@@ -181,11 +181,10 @@ const ProductList = () => {
                 alt={product.name}
                 className="w-full h-40 border object-cover mb-1 productImage"
               />
-              <div className="flex justify-between items-center">
+              <div className="flex justify-between mb-8 items-center">
                 <div>
                   <h2 className="text-xl">{product.name}</h2>
-                  <p className="font-semibold text-lg	 mb-2">
-                    {" "}
+                  <p className="font-semibold text-lg	 mb-1">
                     $ {product.price}.00
                   </p>
 
