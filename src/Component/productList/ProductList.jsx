@@ -6,6 +6,7 @@ import EastIcon from "@mui/icons-material/East";
 import SearchIcon from "@mui/icons-material/Search";
 import { AddNewItem } from "../addNewItem/AddNewItem";
 
+import Poster from "../../assets/images/Rectangle.png";
 const ProductList = () => {
   const [searchByName, setSearchByName] = useState("");
   const [sortBy, setSortBy] = useState("A - Z");
@@ -183,7 +184,15 @@ const ProductList = () => {
               <div className="flex justify-between items-center">
                 <div>
                   <h2 className="text-xl">{product.name}</h2>
-                  <p className="font-semibold mb-5"> ${product.price}.00</p>
+                  <p className="font-semibold text-lg	 mb-2">
+                    {" "}
+                    $ {product.price}.00
+                  </p>
+
+                  <div className="flex gap-3">
+                    <img src={Poster} alt="posterPhoto" />
+                    <p>Josie Parker </p>
+                  </div>
                 </div>
                 <div className="text-xl	 border divide-slate-500 rounded px-2 py-1">
                   <FavoriteBorderIcon />
